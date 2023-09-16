@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <div class="form">
+            <form id="form-add" class="mx-5">
+                <input type="hidden" name="id" value="">
+                <div class="my-5">
+                    <h3> Cadastro de Produtos</h3>
+                </div>
+                <div class="mb-3">
+                    <label for="nome-produto">Nome do produto</label>
+                    <input id="nome-produto" type="text" class="form-control" name="nome_produto" placeholder="Nome do produto">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="preco-venda"> Preço de venda</label>
+                        <input id="preco-venda" type="text" class="form-control" name="preco_venda" placeholder="Preço de venda">
+                    </div>
+                    <div class="col-6">
+                        <label for="preco-custo"> Preço de custo </label>
+                        <input id="preco-custo" type="text" class="form-control" name="preco_custo" placeholder="Preço de custo">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="marca"> Marca </label>
+                        <input id="marca" type="text" name="marca" class="form-control" placeholder="Marca">
+                    </div>
+                    <div class="col-6">
+                        <label for="estoque">Estoque</label>
+                        <input id="estoque" type="text" class="form-control" name="estoque" placeholder="Estoque">
+                    </div>
+                </div>
+                <div class="my-3">
+                    <label for="descricao">Descrição do produto</label>
+                    <textarea name="descricao" class="form-control" id="descricao" rows="10"></textarea>
+                </div>
+                <button onclick="create()" type="button" id="btn-add" class="w-100 btn btn-success">
+                    Cadastrar
+                </button>
+                <button onclick="update()" type="button" id="btn-update" class="w-100 btn btn-primary d-none">
+                    Editar
+                </button>
+            </form>
+        </div>
+        <div class="list">
+           <div class="container">
+            <div class="my-4">
+                <form id="form-search">
+                    <div class="input-group pe-4">
+                        <input type="text" name="search" class="form-control"  placeholder="Buscar item">
+                        <button type="button" onclick="searchWord()" class="btn btn-success">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+                <table id="list-products" class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome do produto</th>
+                            <th>Preço de venda</th>
+                            <th>Preço de custo</th>
+                            <th>Marca</th>
+                            <th>Estoque</th>
+                            <th>Descrição</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>   
+                </table>
+           </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

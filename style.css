@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: absolute;
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper .form {
+    background-color: #ebeaea;
+    width: 35%;
+}
+
+.wrapper .list {
+    width: 65%;
+}
