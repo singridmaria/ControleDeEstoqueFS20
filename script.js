@@ -1,8 +1,13 @@
-const data = window.localStorage.getItem('nome_singrid')
+const nome_singrid = window.localStorage.getItem('nome_singrid')
+const token = window.localStorage.getItem('token')
+const nome_usuario = window.localStorage.getItem('nome_usuario')
 
-window.localStorage.setItem('token','Vfgdfifdghdfhchdfhdthdfhdosgdsdgr')
+// JSON.parse = Converter para objeto dos dados retornado
+// JSON.stringify = Transforma para string de forma que o localStorage entenda
+//host é a forma que o javaScript se comporta
+//dataLayer
 
-console.log(data)
+console.log(JSON.parse(nome_singrid))
 
 let productsAux = []
 let products = [
